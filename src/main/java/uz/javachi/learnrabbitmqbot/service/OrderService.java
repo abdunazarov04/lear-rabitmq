@@ -36,7 +36,9 @@ public class OrderService {
     public OrderService(
             @Value("${telegram.bot.main.image.id}") String mainImgId,
             Executor executor,
-            OrderRepository orderRepository, OrderMapTemporary order, OrderPublisher orderPublisher
+            OrderRepository orderRepository,
+            OrderMapTemporary order,
+            OrderPublisher orderPublisher
     ) {
         this.mainImgId = mainImgId;
         this.executor = executor;

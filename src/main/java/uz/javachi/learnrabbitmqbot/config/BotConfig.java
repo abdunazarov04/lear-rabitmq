@@ -24,8 +24,6 @@ public class BotConfig extends TelegramLongPollingBot {
     @Value("${telegram.bot.username}")
     private String botUsername;
 
-    @Value("${telegram.order.chat-id}")
-    private Long orderGroupId;
     //TODO: 1
     private static final Logger logger = LoggerFactory.getLogger(BotConfig.class);
 
@@ -56,7 +54,6 @@ public class BotConfig extends TelegramLongPollingBot {
                 order.setOrder(chatId, new Order(
                         chatId, "<b>" + foodName + "</b> "
                 ));
-
                 executor.execute(
                         EditMessageCaption.builder()
                                 .chatId(chatId)
@@ -68,7 +65,6 @@ public class BotConfig extends TelegramLongPollingBot {
             }else if (text.startsWith("/chef/order")) {
                 orderService.chefAndOrder(text);
             }
-
         }
 
         if (update.hasMessage() && update.getMessage().hasText()) {

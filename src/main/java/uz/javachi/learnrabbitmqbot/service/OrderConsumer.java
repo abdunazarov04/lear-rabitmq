@@ -24,7 +24,6 @@ public class OrderConsumer {
     @RabbitListener(queues = "orderQueue")
     public void processOrder(String order) {
         System.out.println("Buyurtma qabul qilindi: " + order);
-
         sendNotificationToUser(order);
     }
 
