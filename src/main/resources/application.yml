@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: learn-rabbitmq-bot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/learn_rabbitmq_db
+    username: learn_rabbitmq_user
+    password: rabbit
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    queue-name: orderQueue
+    exchange-name: orderExchange
+    routing-key: orderRoutingKey
+
+telegram:
+  bot:
+    username: rabbitmq_with_java_bot
+    token: 7687438703:AAGfnxdpx_kNMQHSTY05qYEzpSsWxHryjM8
+    main:
+      image:
+        id: AgACAgIAAxkBAAMFZ13wlh6zLTxYrhx1ObLv3B4HvHQAAsT7MRtpUfFK7DKQQ4LinlkBAAMCAAN4AAM2BA
+  order:
+    chat-id: -4624746616
