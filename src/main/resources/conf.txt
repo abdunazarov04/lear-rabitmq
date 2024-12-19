@@ -1,0 +1,9 @@
+telegram:
+  bot:
+    username: rabbitmq_with_java_bot
+    token: 7687438703:AAGfnxdpx_kNMQHSTY05qYEzpSsWxHryjM8
+    main:
+      image:
+        id: AgACAgIAAxkBAAMFZ13wlh6zLTxYrhx1ObLv3B4HvHQAAsT7MRtpUfFK7DKQQ4LinlkBAAMCAAN4AAM2BA
+  order:
+    chat-id: -4624746616

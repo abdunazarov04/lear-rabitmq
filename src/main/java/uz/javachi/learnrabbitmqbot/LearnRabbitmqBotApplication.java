@@ -37,4 +37,16 @@ public class LearnRabbitmqBotApplication {
         }
     }
 
+    /*
+    * TODO:
+    *   RabbitMQ ->
+    *       Config ->
+    *           Telegram bot ->
+    *                     Order ->
+    *                        Chef ->
+    *                           RabbitMQ - Publish ->
+    *                                   RabbitMQ - Consume ->
+    *                                       Notification to user;
+    * */
+
 }
